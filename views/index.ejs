@@ -1,0 +1,23 @@
+<%- include("./partials/head.ejs") %>
+
+    <%- include("./partials/nav.ejs") %>
+    <main>
+        <h1>Examinator MAIN PAGE. WELCOME!</h1><br>
+        <h2>Quizzes that are available rigth now:</h2>
+        <div class="listQuizzes">
+        <% quizs.forEach((quiz) => { %>
+            <div class="quizContainer">
+                <strong><p><%= quiz.question %> </p></strong>
+                <p>A. <%= quiz.answer1 %> </p>
+                <p>B. <%= quiz.answer2 %> </p>
+                <p>C. <%= quiz.answer3 %> </p>
+                <p>D. <%= quiz.answer4 %> </p>
+            </div>
+         <% }) %>
+        </div>
+     </main>
+    
+
+<%- include("./partials/footer.ejs") %>
+
+
