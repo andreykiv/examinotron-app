@@ -3,16 +3,16 @@
 <%- include("./partials/nav.ejs") %>   
 <main>
     <h2>Add a new Question:</h2>
-    <form action="">
-        <label for="question">Question</label>
-        <input type="text" id="question" name="question" >
-        <label for="answer1">Answer1</label>
+    <form action="/api/quizs" method="POST">
+        <label for="question">Question:</label>
+        <input type="text" id="question" name="question">
+        <label for="answer1">Answer</label>
         <input type="text" id="answer1" name="answer1">
-        <label for="answer2">Answer2</label>
+        <label for="answer2">Answer</label>
         <input type="text" id="answer2" name="answer2">
-        <label for="answer3">Answer3</label>
+        <label for="answer3">Answer</label>
         <input type="text" id="answer3" name="answer3">
-        <label for="answer4">Answer4</label>
+        <label for="answer4">Answer</label>
         <input type="text" id="answer4" name="answer4">
         <button type="submit">Submit</button>
     </form>

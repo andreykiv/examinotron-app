@@ -3,6 +3,7 @@ const express = require('express')
 // express app
 const app = express();
 require('./db/mongoose')
+const bodyParser = require('body-parser')
 
 const Quiz = require("./models/quiz")
 const quizRouter = require("./routers/quiz")
@@ -42,6 +43,8 @@ app.get('/create', (req, res) => {
     res.render('create', {title: "Create Quiz"})   
 })
 app.use(express.json())
+app.use(bodyParser.urlencoded({ extended: false }));
+
 app.use('/api', quizRouter)
 
 
