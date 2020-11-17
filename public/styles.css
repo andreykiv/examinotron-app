@@ -111,8 +111,9 @@ footer {
 .quizContainer{
     display: flex;
     flex-direction: column;
-    background-color: rgb(177, 199, 241);
     
+    background-color: rgb(177, 199, 241);
+    margin: 5px;
 }
 
 
