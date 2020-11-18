@@ -6,3 +6,5 @@ This app was made in order to test CRUD operations.
 console.log("I'm a little code here");
 ```
 
+[heroku link](https://examinotron-app.herokuapp.com/)
+
