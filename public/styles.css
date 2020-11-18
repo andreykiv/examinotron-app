@@ -103,15 +103,21 @@ footer {
 }
 /* List a quiz */
 .listQuizzes{
-    display: flex;
-    justify-content: space-evenly;
+    
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "quiz quiz quiz"
+        "quiz quiz quiz";
+    column-gap: 5px;
+    row-gap: 10px;
     padding-top: 10px;
 }
 
 .quizContainer{
     display: flex;
     flex-direction: column;
-    
     background-color: rgb(177, 199, 241);
     margin: 5px;
 }
