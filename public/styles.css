@@ -106,7 +106,7 @@ footer {
     
     display: grid;
     grid-template-columns:1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas: 
         "quiz quiz quiz"
         "quiz quiz quiz";
@@ -120,12 +120,14 @@ footer {
     flex-direction: column;
     background-color: rgb(177, 199, 241);
     margin: 5px;
+    max-height: 35vh;
+    justify-content: space-between;
 }
 
 
 /* Form style: */
 
-form {
+.createForm{
     display: flex;
     flex-direction: column;
     max-width: 40vw;
@@ -153,3 +155,18 @@ form button:hover {
     color: white;
 }
 
+
+
+#deleteForm button {
+    cursor: pointer;
+    background-color: #222233;
+    color: #AACCFF;
+    text-transform: uppercase;
+    height: 1.5vw;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#deleteForm button:hover {
+    color: white;
+}

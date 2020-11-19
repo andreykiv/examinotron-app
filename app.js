@@ -2,6 +2,7 @@ const express = require('express')
 
 // express app
 const app = express();
+const methodOverride = require("method-override");
 require('./db/mongoose')
 const bodyParser = require('body-parser')
 
@@ -18,6 +19,7 @@ app.set('view engine', 'ejs');
 
 // middleware & static files
 app.use(express.static('public'));
+app.use(methodOverride("_method"));
 
 app.use((req, res, next) => {
   console.log('new request made:');
@@ -43,7 +45,7 @@ app.get('/create', (req, res) => {
     res.render('create', {title: "Create Quiz"})   
 })
 app.use(express.json())
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/api', quizRouter)
 

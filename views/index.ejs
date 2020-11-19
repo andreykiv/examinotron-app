@@ -7,12 +7,18 @@
         <div class="listQuizzes">
         <% quizs.forEach((quiz) => { %>
             <div class="quizContainer">
-                <strong><p><%= quiz.question %> </p></strong>
-                <p>A. <%= quiz.answer1 %> </p>
-                <p>B. <%= quiz.answer2 %> </p>
-                <p>C. <%= quiz.answer3 %> </p>
-                <p>D. <%= quiz.answer4 %> </p>
+                <div>
+                    <strong><p><%= quiz.question %> </p></strong>
+                    <p>A. <%= quiz.answer1 %> </p>
+                    <p>B. <%= quiz.answer2 %> </p>
+                    <p>C. <%= quiz.answer3 %> </p>
+                    <p>D. <%= quiz.answer4 %> </p>
+                </div>
+                <form id="deleteForm" action="/api/quizs/<%=quiz._id%>?_method=DELETE" method="POST">
+                    <button type="submit" id= "deleteButton">Delete</button>
+                </form>
             </div>
+
          <% }) %>
         </div>
      </main>

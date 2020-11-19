@@ -4,15 +4,8 @@ const Quiz = require('../models/quiz')
 
 router.post('/quizs', async (req, res) => {
     const quiz = new Quiz(req.body)
-    let question = req.body.question
-    let answer1 = req.body.answer1
-    let answer2 = req.body.answer2
-    let answer3 = req.body.answer3
-    let answer4 = req.body.answer4
-    let newQuiz = {question, answer1, answer2, answer3, answer4}
-
     try {
-        await quiz.save(newQuiz)
+        await quiz.save()
         // res.status(201).send(newQuiz)
         res.status(201).redirect("/")
     } catch (e) {
@@ -75,7 +68,7 @@ router.delete('/quizs/:id', async (req, res) => {
             res.status(404).send()
         }
 
-        res.send(quiz)
+        res.redirect("/")
     } catch (e) {
         res.status(500).send()
     }
