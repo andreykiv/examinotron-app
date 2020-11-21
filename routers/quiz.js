@@ -22,6 +22,16 @@ router.get('/quizs', async (req, res) => {
     }
 })
 
+//Edit quiz route
+router.get('/quizs/:id/edit', async (req, res) => {
+    try {
+        const quiz = await Quiz.findById(req.params.id)
+        res.render("quizzes/edit", {title: "Edit", quiz})
+    } catch (e) {
+        res.status(500).send()
+    }
+})
+
 router.get('/quizs/:id', async (req, res) => {
     const _id = req.params.id
 
@@ -54,11 +64,13 @@ router.patch('/quizs/:id', async (req, res) => {
             return res.status(404).send()
         }
 
-        res.send(quiz)
+        res.redirect("/")
     } catch (e) {
         res.status(400).send(e)
     }
 })
+
+
 
 router.delete('/quizs/:id', async (req, res) => {
     try {

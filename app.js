@@ -44,6 +44,11 @@ app.get('/', async (req, res) => {
 app.get('/create', (req, res) => {
     res.render('create', {title: "Create Quiz"})   
 })
+
+
+
+
+
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 

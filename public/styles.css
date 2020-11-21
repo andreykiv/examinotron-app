@@ -155,9 +155,27 @@ form button:hover {
     color: white;
 }
 
+#deleteForm {
+    display: inline;
+}
 
+#deleteButton {
+    cursor: pointer;
+    background-color: white;
+    letter-spacing: normal;
+    font-size: 17px;
+    color: #AACCFF;
+    text-transform: uppercase;
+    height: 1.5vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 
-#deleteForm button {
+#deleteButton:hover {
+    color: white;
+}
+
+#anchorTagButton  {
     cursor: pointer;
     background-color: #222233;
     color: #AACCFF;
@@ -165,8 +183,16 @@ form button:hover {
     height: 1.5vw;
     margin-top: 10px;
     margin-bottom: 0px;
+    border-width: 0px;
+    letter-spacing: 3px;
 }
 
-#deleteForm button:hover {
+#anchorTagButton:hover {
     color: white;
+}
+
+.deleteSection{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
 }

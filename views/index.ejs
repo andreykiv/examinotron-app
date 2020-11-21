@@ -14,9 +14,7 @@
                     <p>C. <%= quiz.answer3 %> </p>
                     <p>D. <%= quiz.answer4 %> </p>
                 </div>
-                <form id="deleteForm" action="/api/quizs/<%=quiz._id%>?_method=DELETE" method="POST">
-                    <button type="submit" id= "deleteButton">Delete</button>
-                </form>
+               <a href="api/quizs/<%=quiz._id%>/edit"><button id= "anchorTagButton">Edit</button></a>
             </div>
 
          <% }) %>

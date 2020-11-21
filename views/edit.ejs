@@ -1,0 +1,24 @@
+<%- include("./partials/head.ejs") %>  
+
+<%- include("./partials/nav.ejs") %>   
+<main>
+    <h2>Edit quiz:</h2>
+    <% quizs.forEach((quiz) => { %>
+            <form class="createForm" action="/api/quizs/<%=quiz._id%>?_method=PUT" method="POST">
+                <label for="question">Question:</label>
+                <input type="text" id="question" name="quiz[question]" value="<%=quiz.question%>">>
+                <label for="answer1">Answer</label>
+                <input type="text" id="answer1" name="quiz[answer1]" value="<%=quiz.answer1%>">
+                <label for="answer2">Answer</label>
+                <input type="text" id="answer2" name="quiz[answer2]" value="<%=quiz.answer2%>">
+                <label for="answer3">Answer</label>
+                <input type="text" id="answer3" name="quiz[answer3]" value="<%=quiz.answer3%>">
+                <label for="answer4">Answer</label>
+                <input type="text" id="answer4" name="quiz[answer4]" value="<%=quiz.answer4%>">
+                <button type="submit">Submit</button>
+            </form>
+     <%  }) %>
+
+
+</main>
+<%- include("./partials/footer.ejs") %>
