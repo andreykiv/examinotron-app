@@ -1,16 +1,17 @@
+//express app
 const express = require('express')
-
-// express app
 const app = express();
-// in order to use patch and delete methods:
+//for using patch and delete methods:
 const methodOverride = require("method-override");
 require('./db/mongoose')
+//access to body params
 const bodyParser = require('body-parser')
-
+//DB quiz model
 const Quiz = require("./models/quiz")
+// access to quiz router
 const quizRouter = require("./routers/quiz")
 // listen for requests
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 app.listen(port, ()=> {
     console.log(`App listening on port ${port}`)
 });
@@ -22,6 +23,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(methodOverride("_method"));
 
+// for checking hostname, path and mehtod when app is requested.
 app.use((req, res, next) => {
   console.log('new request made:');
   console.log('host: ', req.hostname);
@@ -30,7 +32,7 @@ app.use((req, res, next) => {
   next();
 });
 
-
+//index page
 app.get('/', async (req, res) => {
     try{
         const quizs = await Quiz.find({})
@@ -41,14 +43,13 @@ app.get('/', async (req, res) => {
     
 })
 
-
+//create page
 app.get('/create', (req, res) => {
     res.render('create', {title: "Create Quiz"})   
 })
 
-app.use(express.json())
+// app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }));
-
 app.use('/api', quizRouter)
 
 // 404 page
