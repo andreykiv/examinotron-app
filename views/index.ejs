@@ -2,7 +2,7 @@
 
     <%- include("./partials/nav.ejs") %>
     <main>
-        <h1>WELCOME TO THE MAIN PAGE!</h1><br>
+        <h1>Welcome to the main page!</h1><br>
         <h2>Quizzes that are available rigth now:</h2>
         <div class="listQuizzes">
         <% quizs.forEach((quiz) => { %>
@@ -14,7 +14,7 @@
                     <p>C. <%= quiz.answer3 %> </p>
                     <p>D. <%= quiz.answer4 %> </p>
                 </div>
-               <a href="api/quizs/<%=quiz._id%>/edit"><button id= "anchorTagButton">Edit</button></a>
+               <a href="api/quizs/<%=quiz._id%>"><button id= "anchorTagButton">Edit</button></a>
             </div>
 
          <% }) %>
