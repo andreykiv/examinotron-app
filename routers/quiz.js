@@ -22,8 +22,8 @@ router.get('/quizs', async (req, res) => {
     }
 })
 
-//Edit quiz route
-router.get('/quizs/:id/edit', async (req, res) => {
+//route quiz edit
+router.get('/quizs/:id', async (req, res) => {
     try {
         const quiz = await Quiz.findById(req.params.id)
         res.render("quizzes/edit", {title: "Edit", quiz})

@@ -1,7 +1,7 @@
 //express app
 const express = require('express')
 const app = express();
-//for using patch and delete methods:
+//in order to use patch and delete methods:
 const methodOverride = require("method-override");
 require('./db/mongoose')
 //access to body params
@@ -40,7 +40,6 @@ app.get('/', async (req, res) => {
     } catch(e){
         res.status(500).send()
     }
-    
 })
 
 //create page
@@ -48,7 +47,7 @@ app.get('/create', (req, res) => {
     res.render('create', {title: "Create Quiz"})   
 })
 
-// app.use(express.json())
+app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api', quizRouter)
 
