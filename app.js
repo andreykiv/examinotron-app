@@ -6,10 +6,12 @@ const methodOverride = require("method-override");
 require('./db/mongoose')
 //access to body params
 const bodyParser = require('body-parser')
-//DB quiz model
+//DB  models
 const Quiz = require("./models/quiz")
+const User = require('./models/user')
 // access to quiz router
 const quizRouter = require("./routers/quiz")
+const userRouter = require("./routers/user")
 // listen for requests
 const port = process.env.PORT;
 app.listen(port, ()=> {
@@ -44,12 +46,24 @@ app.get('/', async (req, res) => {
 
 //create page
 app.get('/create', (req, res) => {
-    res.render('create', {title: "Create Quiz"})   
+    res.render('create', {title: "Create quiz"})   
+})
+
+//test page
+app.get("/test", async (req, res) => {
+    try{
+        const quizs = await Quiz.find({})
+        res.render("test", {title: "Take a test", quizs})
+    } catch (e) {
+        res.status(500).send()
+    }
 })
 
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api', quizRouter)
+app.use('/api', userRouter)
+
 
 // 404 page
 app.use((req, res) => {

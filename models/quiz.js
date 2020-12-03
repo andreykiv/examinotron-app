@@ -26,6 +26,11 @@ const Quiz= mongoose.model('Quiz', {
         type: String,
         required: true,
         trim: true
+    },
+    correctAnswer: {
+        type: Number,
+        required: true,
+        trim: true
     }
 })
 

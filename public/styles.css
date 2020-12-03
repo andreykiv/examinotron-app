@@ -196,3 +196,13 @@ form button:hover {
     align-items: baseline;
     justify-content: center;
 }
+
+input[type="radio"] {
+    margin: auto 5px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.testForm {
+    margin: 1vh auto;
+}

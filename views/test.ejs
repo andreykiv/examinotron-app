@@ -1,0 +1,17 @@
+<%- include("./partials/head.ejs") %>
+    <%- include("./partials/nav.ejs") %>
+    <main>
+        <h2>Complete the test to see your score:</h2>
+        <% quizs.forEach((quiz) => { %>
+            <strong><p><%= quiz.question %> </p></strong>
+            <form class="testForm" id="<%= quiz._id %>" action="">
+                <label for="<%= quiz.id %>"><input type="radio" name="answer-form-<%=quiz._id %>" id="<%= quiz.id %>" value="1"><%= quiz.answer1 %></label><br>
+                <label for="<%= quiz.id %>"><input type="radio" name="answer-form-<%=quiz._id %>" id="<%= quiz.id %>" value="2"><%= quiz.answer2 %></label><br>
+                <label for="<%= quiz.id %>"><input type="radio" name="answer-form-<%=quiz._id %>" id="<%= quiz.id %>" value="3"><%= quiz.answer3 %></label><br>
+                <label for="<%= quiz.id %>"><input type="radio" name="answer-form-<%=quiz._id %>" id="<%= quiz.id %>" value="4"><%= quiz.answer4 %></label><br>
+                <p hidden><%= quiz.correctAnswer %></p>
+            </form>
+         <% }) %>
+    </main>
+    <script src="js/script.js"></script>
+<%- include("./partials/footer.ejs") %>

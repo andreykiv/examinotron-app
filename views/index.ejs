@@ -9,18 +9,20 @@
             <div class="quizContainer">
                 <div>
                     <strong><p><%= quiz.question %> </p></strong>
-                    <p>A. <%= quiz.answer1 %> </p>
-                    <p>B. <%= quiz.answer2 %> </p>
-                    <p>C. <%= quiz.answer3 %> </p>
-                    <p>D. <%= quiz.answer4 %> </p>
+                    <p>1. <%= quiz.answer1 %> </p>
+                    <p>2. <%= quiz.answer2 %> </p>
+                    <p>3. <%= quiz.answer3 %> </p>
+                    <p>4. <%= quiz.answer4 %> </p>
                 </div>
                <a href="api/quizs/<%=quiz._id%>"><button id= "anchorTagButton">Edit</button></a>
             </div>
 
          <% }) %>
         </div>
+
+        
      </main>
-    
+  
 
 <%- include("./partials/footer.ejs") %>
 
