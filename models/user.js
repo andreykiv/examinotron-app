@@ -43,13 +43,14 @@ const userSchema = new mongoose.Schema({
 })
 
 
-//pre - especificar el codigo que hay que ejecutar previamente a guardar usamos function porque necesitamos el this.
+//pre - especificar el codigo que hay que ejecutar previamente a guardar. Usamos function porque necesitamos el this.
 userSchema.pre('save', async function(next){
     const user = this
     if(user.isModified('password')){
         //cuando se modiifca el pass hacemos nuevo hash
         user.password = await bcrypt.hash(user.password, 8)
     }
+    next()
 })
 
 const User = mongoose.model('User', userSchema)
