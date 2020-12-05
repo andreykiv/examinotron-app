@@ -22,6 +22,11 @@ router.get('/quizs', async (req, res) => {
     }
 })
 
+router.get('/quizs/answers', async(req, res) => {
+    let correctAnswers = await Quiz.find({}, 'correctAnswer')
+    res.send(correctAnswers)
+})
+
 //route quiz edit
 router.get('/quizs/:id', async (req, res) => {
     try {

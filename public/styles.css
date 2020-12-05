@@ -149,6 +149,8 @@ form button {
     height: 4vh;
     margin-top: 10px;
     margin-bottom: 10px;
+    padding: 0 1vw;
+    border-radius: 5px;
 }
 
 form button:hover {
@@ -169,6 +171,8 @@ form button:hover {
     height: 1.5vw;
     margin-top: 0px;
     margin-bottom: 0px;
+    padding: 0 1vw;
+    border-radius: 5px;
 }
 
 #deleteButton:hover {
@@ -185,6 +189,8 @@ form button:hover {
     margin-bottom: 0px;
     border-width: 0px;
     letter-spacing: 3px;
+    padding: 0 1vw;
+    border-radius: 5px;
 }
 
 #anchorTagButton:hover {
@@ -205,4 +211,75 @@ input[type="radio"] {
 
 .testForm {
     margin: 1vh auto;
+}
+
+#testResult{
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    width: 220px;
+    height: 170px;
+    margin-top: -85px;
+    margin-left: -110px;
+    border: 3px solid #AACCFF;
+    letter-spacing: 2px;
+    display: none;
+}
+
+#testResult div h3 {
+    margin-bottom: 1vh;
+}
+
+.correct{
+    color: green;
+}
+
+.solution{
+    border: 2px green dotted;
+}
+
+.wrong{
+    color: red;
+}
+
+.centeredSubmitBtn{
+    display: flex;
+    justify-content: center;
+}
+
+#submitTestBtn {
+    cursor: pointer;
+    background-color: #222233;
+    color: #AACCFF;
+    text-transform: uppercase;
+    height: 1.5vw;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-width: 0px;
+    letter-spacing: 3px;
+    padding: 0 1vw;
+    border-radius: 5px;
+}
+
+#submitTestBtn:hover{
+    color: white;
+}
+
+.tryAgainBtn {
+    cursor: pointer;
+    background-color: #222233;
+    color: #AACCFF;
+    text-transform: uppercase;
+    height: 1.5vw;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-width: 0px;
+    letter-spacing: 3px;
+    padding: 0 1vw;
+    border-radius: 5px;
+}
+
+.tryAgainBtn:hover{
+    color: white;
 }

@@ -1,0 +1,38 @@
+Examinotron plus:
+
+1. Añadir número de respuesta correcta al modelo "test", tanto en su definición (backend) como en el formulario de creación (frontend).
+
+2. Usar localStorage para hacer seguimiento inmediato de las respuestas del usuario en un array. Se debe interactuar con  
+localStorage cada vez que se modifique el array de respuestas.
+
+3. Mientras no se haya finalizado el formulario, cuando se seleccione una respuesta, se debe poder cambiar de opinión e incluso
+ dejarla sin responder.
+
+4. Cuando se haga "Finalizar formulario" cabe ordenar las respuestas y contrastarlas con los respuestas originales y, 
+consecuentemente, que se expongan los aciertos, con colores verdes y los fallos con colores rojos, señalanda las respuestas 
+correctas enmarcándolas con un borde punteado.
+
+5. Cabe notificar la puntuación final, idealmente en un pop up (div posicionado absolutamente sobre el examen 
+con display inicial 'none' que aparece al cambiar a display 'block', teniendo en cuenta que los aciertos valen un punto 
+y que tres fallos restan uno. Se debe dar el valor sobre 10.
+
+Pistas:
+
+Cabe definir clases en el fichero de estilos.
+
+.correct {
+	color: green;
+}
+
+.solution{
+ 	border: 1px green dotted;
+}
+
+Si un elemento lo queremos marcar como solución:
+
+	elementoEnCuestion.classList.add('solution')
+
+
+Referencias para hacer el ejercicio:
+https://www.w3schools.com/jsref/prop_win_localstorage.asp
+https://www.w3schools.com/jsref/prop_element_classlist.asp

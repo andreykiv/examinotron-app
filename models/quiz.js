@@ -30,7 +30,12 @@ const Quiz= mongoose.model('Quiz', {
     correctAnswer: {
         type: Number,
         required: true,
-        trim: true
+        trim: true,
+        validate(value){
+            if(value < 1 || value >4){
+                throw new Error("Solution not valid")
+            }
+        }
     }
 })
 
