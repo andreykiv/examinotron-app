@@ -179,18 +179,21 @@ form button:hover {
     color: white;
 }
 
+
 #anchorTagButton  {
     cursor: pointer;
     background-color: #222233;
     color: #AACCFF;
     text-transform: uppercase;
-    height: 1.5vw;
+    height: 20px;
     margin-top: 10px;
     margin-bottom: 0px;
     border-width: 0px;
     letter-spacing: 3px;
-    padding: 0 1vw;
+    padding: 0 5px;
     border-radius: 5px;
+    width: 55px;
+    text-decoration: none;
 }
 
 #anchorTagButton:hover {
@@ -253,13 +256,14 @@ input[type="radio"] {
     background-color: #222233;
     color: #AACCFF;
     text-transform: uppercase;
-    height: 1.5vw;
+    height: 25px;
     margin-top: 10px;
     margin-bottom: 0px;
     border-width: 0px;
     letter-spacing: 3px;
     padding: 0 1vw;
     border-radius: 5px;
+    
 }
 
 #submitTestBtn:hover{
@@ -271,7 +275,7 @@ input[type="radio"] {
     background-color: #222233;
     color: #AACCFF;
     text-transform: uppercase;
-    height: 1.5vw;
+    height: 25px;
     margin-top: 10px;
     margin-bottom: 0px;
     border-width: 0px;

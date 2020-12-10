@@ -1,4 +1,4 @@
-const proxyServer = 'https://cors-anywhere.herokuapp.com/'
+// const proxyServer = 'https://cors-anywhere.herokuapp.com/'
 const submitTestBtn = document.getElementById('submitTestBtn')
 const testResult = document.getElementById('testResult')
 

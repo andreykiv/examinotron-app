@@ -17,3 +17,6 @@ const verificar = async (jwt, secret) => {
 firmar(payload, secretKey)
 verificar("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiIxMjMiLCJpYXQiOjE2MDY5ODk1NjB9.NMsFSIFuWWlTtiM2KarpUFf9M0pM1El1mEtRrz7GSUk", secretKey)
 
+<h1>hello</h1>
+
+
