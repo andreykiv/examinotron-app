@@ -1,7 +1,7 @@
 # Examinotron
 
-The purpose of this app was to test test CRUD operations. 
-Features that are available for user:
+The purpose of this app was to test CRUD operations. 
+Features that are available for a user:
 * Create a quiz question with 4 available answers. 
 * Select one correct answer at the moment of the creation. 
 * Update/delete a quiz question. 
